@@ -60,7 +60,7 @@
           <button id="btnRegistrarse" class="btnIngresar_registrar mt-3">Registrarse</button>
         </form>
         <p class="registrarse mt-1">¿Ya tienes cuenta?
-          <a href="#" class="volver-ingreso-link">Volver a Ingresar</a>
+          <a href="#" class="volver-ingreso-link">Ingresar</a>
         </p>
       </div>
     </div>
@@ -76,39 +76,37 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Noticias</a>
+                <a class="nav-link active" aria-current="page" href="#noticias">Noticias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Anuncios</a>
+                <a class="nav-link" href="#anuncios">Anuncios</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Publicidad
-                </a>
+                <a id="tooglePublicidad" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Publicidad</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Servicios</a></li>
-                  <li><a class="dropdown-item" href="#">Trabajos</a></li>
+                  <li><a class="nav-link dropdown-item" href="#servicios">Servicios</a></li>
+                  <li><a class="nav-link dropdown-item" href="#trabajos">Trabajos</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Otros</a></li>
+                  <li><a class="nav-link dropdown-item" href="#otrosTrabajos">Otros Trabajos</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-5 mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a id="miCuenta" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Mi cuenta
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
-                  <li><a class="dropdown-item" href="#">Ver solicitudes</a></li>
+                  <li><a class="nav-link dropdown-item" href="#cambiarContrasena">Cambiar contraseña</a></li>
+                  <li><a class="nav-link dropdown-item" href="#verSolicitudes">Ver solicitudes</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Otros</a></li>
+                  <li><a class="nav-link dropdown-item" href="#otrosMiCuenta">Otros Mi Cuenta</a></li>
                 </ul>
               </li>
             </ul>
@@ -117,7 +115,60 @@
         </div>
       </nav>
     </div>
+    <!-- Ventana de Noticias -->
+    <div id="noticias" hidden>
+      <h1>Noticias</h1>
+
+
+
+    </div>
+    <!-- Ventana de Anuncios -->
+    <div id="anuncios" hidden>
+      <h1>Anuncios</h1>
+
+
+
+    </div>
+    <!-- Ventanas de Publicidad -->
+    <div id="servicios" hidden>
+      <h1>Servicios</h1>
+
+
+
+    </div>
+    <div id="trabajos" hidden>
+      <h1>Trabajos</h1>
+
+
+
+    </div>
+    <div id="otrosTrabajos" hidden>
+      <h1>Otros</h1>
+
+
+
+    </div>
+    <!-- Ventanas de Mi cuenta -->
+    <div id="cambiarContrasena" hidden>
+      <h1>Cambiar contraseña</h1>
+
+
+
+    </div>
+    <div id="verSolicitudes" hidden>
+      <h1>Ver solicitudes</h1>
+
+
+
+    </div>
+    <div id="otrosMiCuenta" hidden>
+      <h1>Otros Mi Cuenta</h1>
+
+
+
+    </div>
   </div>
+  <!-- Pie de pagina -->
   <footer>
     <div id="autores">
       <a href="">Copyright &copy; 2024 - Juan Casallas - Santiago Pérez</a>

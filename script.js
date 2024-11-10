@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const formularioRegistro = document.getElementById('registro');
   const barraNavegacion = document.getElementById('barra_navegacion');
   const body = document.getElementById('fondo');
+  // Obtenemos todos los enlaces de la barra de navegación
+  const enlaces = document.querySelectorAll('.navbar-nav .nav-link:not(#tooglePublicidad):not(#miCuenta)');
 
   // Evento para cambiar de formulario
   enlaceRegistrarse.addEventListener('click', function (event) {
@@ -60,6 +62,26 @@ document.addEventListener('DOMContentLoaded', function () {
     formularioIngreso.style.display = 'flex';  // Se muestra el formulario de ingreso (cambiamos 'none' por 'block')
     // Se vuelve a aplicar el color de fondo al body
     body.style.backgroundColor = 'rgba(167, 139, 250, 1)';  // Vuelve a poner el fondo original
+  });
+
+  // Añadimos el evento de clic a cada enlace
+  enlaces.forEach(enlace => {
+    enlace.addEventListener('click', function (event) {
+      event.preventDefault(); // Evita que se realice la navegación del enlace
+
+      // Primero, ocultamos todos los divs de contenido (pero no la barra de navegación ni el footer)
+      const divs = document.querySelectorAll('div[id]:not(#barra_navegacion):not(#footer):not(#autores)');
+      divs.forEach(div => {
+        div.hidden = true;
+      });
+
+      // Ahora mostramos el div correspondiente al enlace clicado
+      const targetId = this.getAttribute('href').substring(1); // Obtener el id del div desde el href (ej: #noticias)
+      const targetDiv = document.getElementById(targetId);
+      if (targetDiv) {
+        targetDiv.hidden = false; // Mostrar el div
+      }
+    });
   });
 
 });
