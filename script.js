@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const formularioRegistro = document.getElementById('registro');
   const barraNavegacion = document.getElementById('barra_navegacion');
   const body = document.getElementById('fondo');
+  const divNoticias = document.getElementById('noticias');
   // Obtenemos todos los enlaces de la barra de navegación
   const enlaces = document.querySelectorAll('.navbar-nav .nav-link:not(#tooglePublicidad):not(#miCuenta)');
+  // Variable para almacenar el último div visible
+  let ultimoDivVisible = null;
 
   // Evento para cambiar de formulario
   enlaceRegistrarse.addEventListener('click', function (event) {
@@ -33,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
     formularioIngreso.style.display = 'flex';
   });
 
-
   // Se agrega un evento de clic al botón "Ingresar"
   btnIngresar.addEventListener('click', function (event) {
     event.preventDefault(); // Evita que el formulario se envíe
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     barraNavegacion.hidden = false;
     // Se quita el color de fondo del body
     body.style.backgroundColor = 'transparent'; // O eliminar la propiedad si prefieres dejarla vacía
+    divNoticias.hidden = false; // Mostrar siempre el div de Noticias
   });
 
   // Se agrega un evento de clic al botón "Ingresar"
@@ -52,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     barraNavegacion.hidden = false;
     // Se quita el color de fondo del body
     body.style.backgroundColor = 'transparent'; // O eliminar la propiedad si prefieres dejarla vacía
+    divNoticias.hidden = false; // Mostrar siempre el div de Noticias
   });
 
   // Se agrega un evento de clic al botón "Salir"
@@ -59,6 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // Evita que el formulario se envíe
     // Se oculta la barra de navegación y se muestra el formulario de ingreso
     barraNavegacion.hidden = true;           // Se oculta la barra de navegación
+    // Ocultar el último div visible
+    if (ultimoDivVisible) {
+      ultimoDivVisible.hidden = true;
+      ultimoDivVisible = null; // Resetear para que al ingresar de nuevo no muestre un div automáticamente
+    }
     formularioIngreso.style.display = 'flex';  // Se muestra el formulario de ingreso (cambiamos 'none' por 'block')
     // Se vuelve a aplicar el color de fondo al body
     body.style.backgroundColor = 'rgba(167, 139, 250, 1)';  // Vuelve a poner el fondo original
@@ -70,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault(); // Evita que se realice la navegación del enlace
 
       // Primero, ocultamos todos los divs de contenido (pero no la barra de navegación ni el footer)
-      const divs = document.querySelectorAll('div[id]:not(#barra_navegacion):not(#footer):not(#autores)');
+      const divs = document.querySelectorAll('div[id]:not(#barra_navegacion):not(#ingreso):not(#registro):not(#footer):not(#autores)');
       divs.forEach(div => {
         div.hidden = true;
       });
@@ -80,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetDiv = document.getElementById(targetId);
       if (targetDiv) {
         targetDiv.hidden = false; // Mostrar el div
+        // Actualizar el último div visible
+        ultimoDivVisible = targetDiv;
       }
     });
   });
