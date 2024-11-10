@@ -117,27 +117,204 @@
     </div>
     <!-- Ventana de Noticias -->
     <div id="noticias" hidden>
-      <h1>Noticias</h1>
-
-
-
+      <h5>Últimas noticias - Conjunto recidencial</h5>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div id="imgRep"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Novedades</h5>              
+            </div>
+          </div>
+          <div class="carousel-item text-center" data-bs-interval="2000">
+            <img src="https://www.semana.com/resizer/v2/BWHRFK2EG5DHPPLKQ42GA3IYVY.jpeg?auth=f9d01ac277175f355a34de9db052728e3daa1f03ff0f45e6499011c006e60148&smart=true&quality=75&width=1280&fitfill=false" class="img-fluid w-25 h-25" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Ayuda!</h5>              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Espacio</h5>
+              <p>Aquí puede estar su noticia relevante</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
     <!-- Ventana de Anuncios -->
-    <div id="anuncios" hidden>
-      <h1>Anuncios</h1>
+    <div id="anuncios" hidden> 
 
-
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">Anuncios Recientes</h1>
+        <div class="row">
+            
+            <!-- Anuncio 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://cronuts.digital/wp-content/uploads/2023/12/0Fd4XuQCy1Nbwml843D.png" class="card-img-top" alt="Anuncio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Espacio disponible</h5>
+                        <p class="card-text">Llamar al +57-31255896</p>                  
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Anuncio 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://cronuts.digital/wp-content/uploads/2023/12/5ca68bf447ac13861ea84d17da389541.jpg" class="card-img-top" alt="Anuncio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Coca-Cola</h5>
+                        <p class="card-text">Ofertas en el camión de Coca-Cola, al respaldo del conjunto</p>                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Anuncio 3 -->          
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="https://cronuts.digital/wp-content/uploads/2023/12/0Fd4XuQCy1Nbwml843D.png" class="card-img-top" alt="Anuncio 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Espacio disponible</h5>
+                      <p class="card-text">Llamar al +57-31255896</p>                  
+                  </div>
+              </div>
+          </div>
+          
+    
+        </div>
+    </div>
 
     </div>
     <!-- Ventanas de Publicidad -->
     <div id="servicios" hidden>
-      <h1>Servicios</h1>
+      <div class="container my-5">
+        <h2 class="text-center font-weight-bold mb-4">Servicios</h2>
+        <p class="text-center text-muted mb-5">Conoce los servicios que ofrece nuestra comunidad.</p>
+        
+        <div class="row text-center">
+            
+            <!-- Servicio 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-line fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Consultoría</h5>
+                        <p class="card-text text-muted">Asesoría profesional para mejorar tus estrategias de negocio y lograr el éxito. +57-35125</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-laptop-code fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Reparación de computadores</h5>
+                        <p class="card-text text-muted">Arreglamos sus equipos elecctronicos en su apartamento. +57-35126516.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-bullhorn fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Aquí puede estar tú emprendimiento</h5>
+                        <p class="card-text text-muted">Impulsa tu trabajo y brinda servicios a la comunidad, ellos lo veran aquí.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
 
 
     </div>
     <div id="trabajos" hidden>
-      <h1>Trabajos</h1>
+      <div class="container my-5">
+        <h2 class="text-center font-weight-bold mb-4">Encuentra Tu Próximo Trabajo</h2>
+        <p class="text-center text-muted mb-5">Ayuda a la comunidad.</p>                
+    
+        <!-- Listado de Trabajos -->
+        <div class="row">
+            
+            <!-- Trabajo 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Lavar ropa</h5>
+                        <p class="card-text text-muted">Apartamento: 403</p>
+                        <p class="card-text">Torre: 5</p>
+                        <p class="card-text">Requisitos: Lavar 5 canastas de ropa</p>                        
+                        <p class="card-text">Valor$: 100.000</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trabajo 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title font-weight-bold">Lavar ropa</h5>
+                      <p class="card-text text-muted">Apartamento: 603</p>
+                      <p class="card-text">Torre: 1</p>
+                      <p class="card-text">Requisitos: Lavar y secar ropa de niños</p>                        
+                      <p class="card-text">Valor$: 50.000</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trabajo 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title font-weight-bold">Aseo general</h5>
+                      <p class="card-text text-muted">Apartamento: 101</p>
+                      <p class="card-text">Torre: 2</p>
+                      <p class="card-text">Requisitos: Lavar,secar, organizar todo el apartamento</p>                        
+                      <p class="card-text">Valor$: 160.000</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trabajo 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title font-weight-bold">Cuidar niños</h5>
+                      <p class="card-text text-muted">Apartamento: 607</p>
+                      <p class="card-text">Torre: 6</p>
+                      <p class="card-text">Requisitos: Alimentar y estar al cuidado de dos diños de 4 a.m a 6 p.m</p>                        
+                      <p class="card-text">Valor$: 60.000</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
 
 

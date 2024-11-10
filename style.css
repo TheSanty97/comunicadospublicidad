@@ -159,4 +159,12 @@ footer a {
   margin: 3px;
   font-size: 13px;
 }
+
+#imgRep {
+  background-image: url("https://i.pinimg.com/564x/69/a0/7d/69a07de572ed01eb390a02047b93589e.jpg");
+  background-repeat: repeat; /* Repite la imagen en ambas direcciones */
+  background-size: 100px; /* Mantiene el tamaño original de la imagen */
+  width: 1400px; /* Ancho del div */
+  height: 400px; /* Altura del div */
+}
 /*Fin Seccion Footer*/
