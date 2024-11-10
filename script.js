@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // Evita que el formulario se envíe
     // Se oculta la barra de navegación y se muestra el formulario de ingreso
     barraNavegacion.hidden = true;           // Se oculta la barra de navegación
+    divNoticias.hidden = true; // Ocultar el div de Noticias
     // Ocultar el último div visible
     if (ultimoDivVisible) {
       ultimoDivVisible.hidden = true;
