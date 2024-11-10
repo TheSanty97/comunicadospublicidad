@@ -80,27 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault(); // Evita que se realice la navegación del enlace
 
       // Primero, ocultamos todos los divs de contenido (pero no la barra de navegación ni el footer)
-      // const divs = document.querySelectorAll('div[id]:not(#barra_navegacion):not(#ingreso):not(#registro):not(#footer):not(#autores)');
-      const noticias = document.getElementById('noticias');        
-      noticias.hidden = true
-      const anuncios = document.getElementById('anuncios');
-      anuncios.hidden = true;        
-      const trabajos = document.getElementById('trabajos');
-      trabajos.hidden = true;        
-      const cambiarContrasena = document.getElementById('cambiarContrasena');
-      cambiarContrasena.hidden = true;   
-      const verSolicitudes = document.getElementById('verSolicitudes');
-      verSolicitudes.hidden = true;        
-      const otrosMiCuenta = document.getElementById('otrosMiCuenta');
-      otrosMiCuenta.hidden = true;        
-      // const carouselExampleDark = document.getElementById('carouselExampleDark');        
-      /* divs.forEach(div => {
-        if (div.id != 'carouselExampleDark')
-        {
-          div.hidden = true;
-        }
+      const divs = document.querySelectorAll('div[id]:not(#barra_navegacion):not(#ingreso):not(#registro):not(#footer):not(#autores):not(#carouselExampleDark)');  
+      divs.forEach(div => {
+        div.hidden = true;
         
-      });*/
+      });
 
       // Ahora mostramos el div correspondiente al enlace clicado
       const targetId = this.getAttribute('href').substring(1); // Obtener el id del div desde el href (ej: #noticias)
