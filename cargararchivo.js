@@ -16,7 +16,7 @@ const imageInput = document.getElementById('imageInput');
                     const carouselItem = document.createElement('div');
                     carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
                     carouselItem.innerHTML = `
-                        <img src="${e.target.result}" class="img-fluid w-25 h-50" alt="Imagen ${index + 1}">
+                        <img src="${e.target.result}" class="img-fluid w-50 h-50" alt="Imagen ${index + 1}">
                     `;
                     carouselContent.appendChild(carouselItem);
                 };
