@@ -14,7 +14,7 @@ const imageInput = document.getElementById('imageInput');
                 reader.onload = (e) => {
                     // Crear un contenedor para la imagen
                     const carouselItem = document.createElement('div');
-                    carouselItem.className = `carousel-item text-center data-bs-interval="2000" ${index === 0 ? 'active' : ''}`;
+                    carouselItem.className = `carousel-item text-center mt-5 data-bs-interval="20" ${index === 0 ? 'active' : ''}`;
                     carouselItem.innerHTML = `
                         <img src="${e.target.result}" class="img-fluid w-60 h-50" alt="Imagen ${index + 1}">
                     `;
